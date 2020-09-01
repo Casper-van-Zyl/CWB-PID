@@ -48,6 +48,12 @@ ui <- dashboardPage(skin = "black",
                             tabItem(tabName = "BFS", value = "BFS",
                                     # conditionalPanel("input.n == 1",   
                                     box(width = 40,    
+                                        br(),
+                                        box(width = 38, style = "font-size:150%",
+                                            strong("General Instructions: Please provide relevant demographic information below (leaving out Name and Surname as this survey is anonymous).
+                                                      Please start at Section A and continue to the end at 'Submit'. We ask that you do the questions in order to prevent accidentally skipping one."),
+                                        ),
+                                        br(),
                                         fluidRow(         
                                             box(
                                                 box(textInput("Name", "Name")),
