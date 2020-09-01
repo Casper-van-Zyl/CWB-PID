@@ -32,13 +32,13 @@ ui <- dashboardPage(skin = "black",
                                             "You are invited to participate in a research study which focuses on personality and personality functioning. 
                                         The aim of this research study is to broaden our understanding of specific traits by investigating how they 
                                         mutually interact and influence each another as well as their relation to counterproductive work behaviour. 
-                                        The benefit of participating is that it helps us to understand these processes. The questionnaire contains 
-                                        32 items about counterproductive behaviour at work and 100 personality items. It takes approximately 15-20 minutes
+                                        By participating you help us to understand these processes. The questionnaire contains 
+                                        32 items about counterproductive behaviour at work and 140 personality items. It takes approximately 15-20 minutes
                                         to complete. You need to be 18 years or older and have a minimum of 8 years of prior schooling to participate. This questionnaire
-                                        is COMPLETELY ANONYMOUS as we need particiants be be entirely honest for the research to be meaningful. Participation is 
+                                        is COMPLETELY ANONYMOUS as we need particiants to be entirely honest for the research to be meaningful. Participation is 
                                         voluntary. As such, by completing the questionnaire, you consent to participating in the study. You have the right to 
                                         withdraw from the study at any stage should you wish to do so. To continue, Click 'Proceed' below, then, read the instructions,
-                                        complete the questions, and 'Submit' when you are done." 
+                                        complete the questions, and press 'Submit' when you are finished."  
                                         ),
                                         
                                         actionButton("jumptoBFS", "Proceed"))
