@@ -76,7 +76,7 @@ ui <- dashboardPage(skin = "black",
                                             
                                             
                                             box(
-                                                box(selectInput("Employment status", "Employment status", c("Currently unemployed","Student","Self-employed" ,"Worker", "Supervisor", "Middle Management", "Senior Management", "Executive", "Professional (eg. Lawyer, Doctor"), selected = "Self-employed")),
+                                                box(selectInput("Employment", "Employment status", c("Currently unemployed","Student","Self-employed" ,"Worker", "Supervisor", "Middle Management", "Senior Management", "Executive", "Professional (eg. Lawyer, Doctor"), selected = "Self-employed")),
                                                 box(selectInput("Gender", "Gender", c("Male", "Female", "Other")))
                                             ),
                                         ), # close fluidRow
@@ -370,7 +370,7 @@ server <- function(input, output, session) {
             dob = input$dob,
             Age = input$Age,
             Gender = input$Gender,
-            Ethnicity = input$Ethnicity,
+            Ethnicity = input$Employment,
             Language = input$Language,
             Education = input$Education,
             CWB_1 = input$CWB_1,
