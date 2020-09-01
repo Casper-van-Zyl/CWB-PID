@@ -327,7 +327,7 @@ ui <- dashboardPage(skin = "black",
                                         hidden(
                                           div(
                                             id = "thankyou_msg",
-                                            h4("Thank you for your participation! Your responses were submitted successfully. You can close this window.")
+                                            h4("Thank you for your participation! Your responses were submitted successfully. You can now close this window.")
                                             
                                           )
                                         )
