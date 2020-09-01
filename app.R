@@ -17,8 +17,8 @@ ui <- dashboardPage(skin = "black",
                     dashboardSidebar(width = 350, collapsed = TRUE,
                                      sidebarMenu(id = "tabs",
                                                  menuItem("About", tabName = "About", icon = icon("th")),
-                                                 menuItem("Complete the Questionnaire", tabName = "BFS", icon = icon("th")),
-                                                 menuItem("Thank_you", tabName = "Thank_you", icon = icon("th"))
+                                                 menuItem("Complete the Questionnaire", tabName = "BFS", icon = icon("th"))
+                                                 
                                      )
                     ),
                     
