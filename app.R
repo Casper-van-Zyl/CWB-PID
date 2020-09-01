@@ -252,6 +252,13 @@ ui <- dashboardPage(skin = "black",
                                             )          
                                         ),               
                                         
+                                        box(width = 38, style = "font-size:130%",
+                                            strong("SECTION C - Like above, the following statements also relate to your everyday thoughts, feelings and behaviours.
+                                                             Please read each statement carefully and select the answer that best describes how you usually think and 
+                                                             feel by selecting one of the follwing: 1= Stongly Disagree | 2=Disagree | 3=Neither Agree nor Disagree | 4=Agree | 5=Strongly Agree. 
+                                                             Again, please describe yourself honestly as you are, and not as you would like to be.")
+                                        ),
+                                        
                                         box(width = 38, # contains 2 columns of H-H  items  
                                             box(width = 36, 
                                                 column(width = 6,
