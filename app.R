@@ -252,43 +252,88 @@ ui <- dashboardPage(skin = "black",
                                             )          
                                         ),               
                                         
+                                        box(width = 38, # contains 2 columns of H-H  items  
+                                            box(width = 36, 
+                                                column(width = 6,
+                                                       box(
+                                                         width = NULL, title = "",
+                                                         sliderInput("HH_SINC_1", "1. I sometimes pretend to be more than I am.", width = '425px', 1, 4,  1),
+                                                         sliderInput("HH_FAIR_1", "2. I would never take things that aren't mine.  ", width = '425px', 1, 4,  1),
+                                                         sliderInput("HH_GREED_1", "3. I would enjoy being a famous celebrity.  ", width = '425px', 1, 4,  1),
+                                                         sliderInput("HH_MOD_1", "4. I think that I'm better than most other people.   ", width = '425px', 1, 4,  1),
+                                                         sliderInput("HH_SINC_2", "5. I use of flattery to get ahead. ", width = '425px', 1, 4,  1),
+                                                         sliderInput("HH_FAIR_2", "6. I would cheat on my taxes.  ", width = '425px', 1, 4,  1),
+                                                         sliderInput("HH_GREED_2", "7. I don't strive for elegance in my appearance.  ", width = '425px', 1, 4,  1),
+                                                         sliderInput("HH_MOD_2", "8. I see myself as an average person.   ", width = '425px', 1, 4,  1),
+                                                         sliderInput("HH_SINC_3", "9. I tell other people what they want to hear so that they will do what I want them to do.", width = '425px', 1, 4,  1),
+                                                         sliderInput("HH_FAIR_3", "10. I alwys return extra change when a cashier makes a mistake. ", width = '425px', 1, 4,  1),
+                                                         sliderInput("HH_GREED_3", "11. I love luxury.  ", width = '425px', 1, 4,  1),
+                                                         sliderInput("HH_MOD_3", "12. I'm just an ordinary person.", width = '425px', 1, 4,  1),
+                                                         sliderInput("HH_SINC_4", "13. I sometimes put on a 'show' to impress people.", width = '425px', 1, 4,  1),
+                                                         sliderInput("HH_FAIR_4", "14. I think I would feel very badly if I were to steal anything from someone else.", width = '425px', 1, 4,  1),
+                                                         sliderInput("HH_GREED_4", "15. I have a strong need for power. ", width = '425px', 1, 4,  1),
+                                                         sliderInput("HH_MOD_4", "16. I consider myself just an average person.", width = '425px', 1, 4,  1),
+                                                         sliderInput("HH_SINC_5", "17. I would switch my loyalties should I need to.", width = '425px', 1, 4,  1),
+                                                         sliderInput("HH_FAIR_5", "18. I try to follow the rules.", width = '425px', 1, 4,  1),
+                                                         sliderInput("HH_GREED_5", "19. I strive to be a high status person.", width = '425px', 1, 4,  1),
+                                                         sliderInput("HH_MOD_5", "20. I would like to have more power than other people.", width = '425px', 1, 4,  1),
+                                                       )
+                                                ), 
+                                                column(width = 6,
+                                                       box(style = "padding-bottom:50px",
+                                                           width = NULL, title = "",
+                                                           sliderInput("HH_SINC_6", "21. I often act like someone I'm not to impress people.  ", width = '425px', 1, 4,  1),
+                                                           sliderInput("HH_FAIR_6", "22. I admire a really clever scam. ", width = '425px', 1, 4,  1),
+                                                           sliderInput("HH_GREED_6", "23. I am mainly interested in money. ", width = '425px', 1, 4,  1),
+                                                           sliderInput("HH_MOD_6", "24. I believe that I'm better than others.  ", width = '425px', 1, 4,  1),
+                                                           sliderInput("HH_SINC_7", "25. I often pretend to be concerned for others. ", width = '425px', 1, 4,  1),
+                                                           sliderInput("HH_FAIR_7", "26. It's okay to cheat if it helps me to get ahead. ", width = '425px', 1, 4,  1),
+                                                           sliderInput("HH_GREED_7", "27. I wish to stay young forever.  ", width = '425px', 1, 4,  1),
+                                                           sliderInput("HH_MOD_7", "28. I like it when I attract attention.  ", width = '425px', 1, 4,  1),
+                                                           sliderInput("HH_SINC_8", "29. I act like different people in different situations.  ", width = '425px', 1, 4,  1),
+                                                           sliderInput("HH_FAIR_8", "30. I tend to steal things.  ", width = '425px', 1, 4,  1),
+                                                           sliderInput("HH_GREED_8", "31. I try to impress other people. ", width = '425px', 1, 4,  1),
+                                                           sliderInput("HH_MOD_8", "32. I think I'm more capable than most others. ", width = '425px', 1, 4,  1),
+                                                           sliderInput("HH_SINC_9", "33. I find it is necessary to please people who have power. ", width = '425px', 1, 4,  1),
+                                                           sliderInput("HH_FAIR_9", "34. I have cheated on, or lied, to people who have trusted me. ", width = '425px', 1, 4,  1),
+                                                           sliderInput("HH_GREED_9", "35. I prefer to eat at expensive restaurants. ", width = '425px', 1, 4,  1),
+                                                           sliderInput("HH_MOD_9", "36. I am likely to show off if I get the chance. ", width = '425px', 1, 4,  1),
+                                                           sliderInput("HH_SINC_10", "37. I let people push me around to help them feel important.  ", width = '425px', 1, 4,  1),
+                                                           sliderInput("HH_FAIR_10", "38. I don't think I'll regret taking advantage of someone. ", width = '425px', 1, 4,  1),
+                                                           sliderInput("HH_GREED_10", "39. I live life for my own personal gain. ", width = '425px', 1, 4,  1),
+                                                           sliderInput("HH_MOD_10", "40. I tend to boast about my virtues (goodness).  ", width = '425px', 1, 4,  1)
+                                                       ) 
+                                                )   
+                                            )          
+                                        ),
+                                        
                                         actionButton("submit", "Submit"),
                                         
-                                       
-                                    
+                                        
+                                        
                                         hidden(
-                                           div(
+                                          div(
                                             id = "thankyou_msg",
-                                            h4("Thank you! Your response was submitted successfully, and you can now close this window.")
+                                            h4("Thank you for your participation! Your responses were submitted successfully. You can close this window.")
                                             
+                                          )
                                         )
-                                    )
-                            
+                                        
                                         
                                         
                                         
                                     ) # close big container box   
                                     
-                            ), 
+                            ) # close BFS tab
                             
-                            tabItem(tabName = "Thank_you", value = "Thank_you",
-                                    box(width = 40,
-                                        box(width = 30, title = "", style = "font-size:150%",
-                                            br(),
-                                            "Thank You!") 
-                                        ),
-                                           
-                                        
-                                    )
-                                    
-                                    
-                                    
-                                    #) # close conditional Panel
-                            #) # close TabItem
+                            
+                            
+                            
+                            
+                            
                         ) # close TabItems
                     ) # close DashboadBody
 )                                 
-
 
 
 server <- function(input, output, session) {
@@ -446,7 +491,47 @@ server <- function(input, output, session) {
             PID_97 = input$PID_97,    
             PID_98 = input$PID_98,    
             PID_99 = input$PID_99,    
-            PID_100 = input$PID_100)    
+            PID_100 = input$PID_100,
+            HH_SINC_1	= input$HH_SINC_1,
+            HH_FAIR_1	= input$HH_FAIR_1,  
+            HH_GREED_1 = input$HH_GREED_1, 
+            HH_MOD_1	= input$HH_MOD_1,	
+            HH_SINC_2	= input$HH_SINC_2,
+            HH_FAIR_2	= input$HH_FAIR_2,
+            HH_GREED_2	= input$HH_GREED_2,
+            HH_MOD_2	= input$HH_MOD_2,
+            HH_SINC_3	=input$HH_SINC_3,
+            HH_FAIR_3	=input$HH_FAIR_3,
+            HH_GREED_3	=input$HH_GREED_3,
+            HH_MOD_3	=input$HH_MOD_3,
+            HH_SINC_4	=input$HH_SINC_4,
+            HH_FAIR_4	=input$HH_FAIR_4,
+            HH_GREED_4	=input$HH_GREED_4,
+            HH_MOD_4	=input$HH_MOD_4,
+            HH_SINC_5	=input$HH_SINC_5,
+            HH_FAIR_5	=input$HH_FAIR_5,
+            HH_GREED_5	=input$HH_GREED_5,
+            HH_MOD_5	=input$HH_MOD_5,
+            HH_SINC_6	=input$HH_SINC_6,
+            HH_FAIR_6	=input$HH_FAIR_6,
+            HH_GREED_6	=input$HH_GREED_6,
+            HH_MOD_6	=input$HH_MOD_6,
+            HH_SINC_7	=input$HH_SINC_7,
+            HH_FAIR_7	=input$HH_FAIR_7,
+            HH_GREED_7	=input$HH_GREED_7,
+            HH_MOD_7	=input$HH_MOD_7,
+            HH_SINC_8	=input$HH_SINC_8,
+            HH_FAIR_8	=input$HH_FAIR_8,
+            HH_GREED_8	=input$HH_GREED_8,
+            HH_MOD_8	=input$HH_MOD_8,
+            HH_SINC_9	=input$HH_SINC_9,
+            HH_FAIR_9	=input$HH_FAIR_9,
+            HH_GREED_9	=input$HH_GREED_9,
+            HH_MOD_9	=input$HH_MOD_9,
+            HH_SINC_10	=input$HH_SINC_10,
+            HH_FAIR_10	=input$HH_FAIR_10,
+            HH_GREED_10	=input$HH_GREED_10,
+            HH_MOD_10	=input$HH_MOD_10)
         
         
         
@@ -464,4 +549,4 @@ server <- function(input, output, session) {
 
 shinyApp(ui, server)
 
-## bla bla
+
