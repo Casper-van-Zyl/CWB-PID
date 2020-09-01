@@ -81,17 +81,17 @@ ui <- dashboardPage(skin = "black",
                                             ),
                                         ), # close fluidRow
                                         
-                                        box(width = 38, style = "font-size:150%",
+                                        box(width = 38, style = "font-size:130%",
                                             strong("SECTION A - Instructions: Please indicate how often have you done each of the following things on your present job?
-                                                                1=Never | 2=Once or Twice | 3=Once or Twice per Month | 4=Once or Twice per Week | 5=Every Day. 
-                                                                Please provide honest responses as this survey is completely anonymous. (If you have never been 
-                                                                employed, please skip this section and continue to Section B below)"),
+                                                    1=Never | 2=Once or Twice | 3=Once or Twice per Month | 4=Once or Twice per Week | 5=Every Day. 
+                                                    Please provide honest responses as this survey is completely anonymous. (If you have never been 
+                                                    employed, please skip this section and continue to Section B below)"),
                                         ),
                                         
                                         box(width = 38,     
                                             box(width = 36,  # contains 2 columns of CWB items
                                                 column(width = 6,
-                                                       box(
+                                                       box(style = "padding-bottom:50px",
                                                            width = NULL, title = "",
                                                            sliderInput("CWB_1", "1.	Purposely wasted your employer's materials/supplies  ", width = '425px', 1, 5, 1),
                                                            sliderInput("CWB_2", "2.	Purposely did your work incorrectly  ", width = '425px', 1, 5, 1),
@@ -135,18 +135,18 @@ ui <- dashboardPage(skin = "black",
                                             )
                                         ),
                                         
-                                        box(width = 38, style = "font-size:150%",
-                                            strong("SECTION B - Instructions: This is a list of things different people might say about themselves. We are interested in how you would describe yourself.  
-                                                                                 There are no right or wrong answers. So you can describe yourself as honestly as possible, we will keep your responses confidential. We'd like 
-                                                                                 you to take your time and read each statement carefully, selecting the response that best describes you. 1=Very False or Often False |
-                                                                                 2=Sometimes or Somewhat False | 3=Sometimes or Somewhat True | 4=Very True or Often True"),
+                                        box(width = 38, style = "font-size:130%",
+                                            strong("SECTION B - This is a list of things different people might say about themselves. We are interested in how you would describe yourself.  
+                                                    There are no right or wrong answers. Please describe yourself as honestly as possible, which may require you to admit to some aspect of 
+                                                    yourself that you don't like ver much. Take your time and read each statement carefully, selecting the response that best describes you. 
+                                                    1=Very False or Often False | 2=Sometimes or Somewhat False | 3=Sometimes or Somewhat True | 4=Very True or Often True"),
                                         ),
                                         
                                         
                                         box(width = 38, # contains 2 columns of PID5 items   
                                             box(width = 36,
                                                 column(width = 6,
-                                                       box(
+                                                       box(style = "padding-bottom:30px",
                                                            width = NULL, title = "",
                                                            sliderInput("PID_1", "1. Plenty of people are out to get me.  ", width = '425px', 1, 4,  1),
                                                            sliderInput("PID_2", "2. I feel like I act totally on impulse.  ", width = '425px', 1, 4,  1),
@@ -259,11 +259,11 @@ ui <- dashboardPage(skin = "black",
                                         ),               
                                         
                                         box(width = 38, style = "font-size:130%",
-                                            strong("SECTION C - Like above, the following statements also relate to your everyday thoughts, feelings and behaviours.
-                                                             Please read each statement carefully and select the answer that best describes how you usually think and 
-                                                             feel by selecting one of the follwing: 1= Stongly Disagree | 2=Disagree | 3=Neither Agree nor Disagree | 4=Agree | 5=Strongly Agree. 
-                                                             Again, please describe yourself honestly as you are, and not as you would like to be.")
-                                        ),
+                                            strong("SECTION C - As above, the following statements relate to your everyday thoughts, feelings and behaviours.
+                                                    Please read each statement carefully and select the answer that best describes how you usually think and 
+                                                    feel by selecting one of the follwing: 1=Stongly Disagree | 2=Disagree | 3=Neither Agree nor Disagree | 4=Agree | 5=Strongly Agree."
+                                                   )
+                                            ),
                                         
                                         box(width = 38, # contains 2 columns of H-H  items  
                                             box(width = 36, 
