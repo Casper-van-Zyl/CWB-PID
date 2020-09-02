@@ -32,12 +32,12 @@ ui <- dashboardPage(skin = "black",
                                             "You are invited to participate in a research study which focuses on personality and personality functioning. 
                                         The aim of this research study is to broaden our understanding of specific traits by investigating how they 
                                         mutually interact and influence each another as well as their relation to counterproductive work behaviour. 
-                                        By participating you help us to understand these processes. The questionnaire contains 
-                                        32 items about counterproductive behaviour at work and 140 personality items. It takes approximately 15-20 minutes
-                                        to complete. You need to be 18 years or older and have a minimum of 8 years of prior schooling to participate. This questionnaire
+                                        By participating you help us to understand these processes. The questionnaire 
+                                        starts with questions about counterproductive behaviour at work followed by personality questions. It takes approximately 15-20 minutes
+                                        to complete. You need to be 18 years or older and have a minimum of 8 years of prior schooling to participate. The questionnaire
                                         is COMPLETELY ANONYMOUS as we need particiants to be entirely honest for the research to be meaningful. Participation is 
-                                        voluntary. As such, by completing the questionnaire, you consent to participating in the study. You have the right to 
-                                        withdraw from the study at any stage should you wish to do so. To continue, Click 'Proceed' below, then, read the instructions,
+                                        voluntary. As such, by completing the questionnaire, you consent to participate in the study. You have the right to 
+                                        withdraw at any stage should you wish to do so. To continue, Click 'Proceed' below, then, read the instructions,
                                         complete the questions, and press 'Submit' when you are finished."  
                                         ),
                                         
@@ -51,13 +51,13 @@ ui <- dashboardPage(skin = "black",
                                         br(),
                                         box(width = 38, style = "font-size:150%",
                                             strong("General Instructions: Please provide relevant demographic information below (leaving out Name and Surname as this survey is anonymous).
-                                                      Please start at Section A and continue to the end at 'Submit'. We ask that you do the questions in order to prevent accidentally skipping one."),
+                                                      Please start at Section A and continue to the end at 'Submit'. We suggest doing questions in order to prevent accidentally skipping one."),
                                         ),
                                         br(),
                                         fluidRow(         
                                             box(
-                                                box(textInput("Name", "Name")),
-                                                box(textInput("Surname", "Surname"))
+                                                box(textInput("Name", "Name", value = "Anonymous")),
+                                                box(textInput("Surname", "Surname", value = "Anonymous"))
                                             ),
                                             
                                             box(
@@ -82,7 +82,7 @@ ui <- dashboardPage(skin = "black",
                                         ), # close fluidRow
                                         
                                         box(width = 38, style = "font-size:130%",
-                                            strong("SECTION A - Instructions: Please indicate how often have you done each of the following things on your present job?
+                                            strong("SECTION A - Instructions: Please indicate how often have you done each of the following things at your present or last job?
                                                     1=Never | 2=Once or Twice | 3=Once or Twice per Month | 4=Once or Twice per Week | 5=Every Day. 
                                                     Please provide honest responses as this survey is completely anonymous. (If you have never been 
                                                     employed, please skip this section and continue to Section B below)"),
@@ -93,7 +93,7 @@ ui <- dashboardPage(skin = "black",
                                                 column(width = 6,
                                                        box(style = "padding-bottom:50px",
                                                            width = NULL, title = "",
-                                                           sliderInput("CWB_1", "1.	Purposely wasted your employer's materials/supplies  ", width = '425px', 1, 5, 1),
+                                                           sliderInput("CWB_1", "1.	Purposely wasted your employer's materials/supplies  ", width = '425px', 1, 5, 1, value = 4),
                                                            sliderInput("CWB_2", "2.	Purposely did your work incorrectly  ", width = '425px', 1, 5, 1),
                                                            sliderInput("CWB_3", "3.	Came to work late without permission  ", width = '425px', 1, 5, 1),
                                                            sliderInput("CWB_4", "4.	Stayed home from work and said you were sick when you weren't  ", width = '425px', 1, 5, 1),
@@ -138,7 +138,7 @@ ui <- dashboardPage(skin = "black",
                                         box(width = 38, style = "font-size:130%",
                                             strong("SECTION B - This is a list of things different people might say about themselves. We are interested in how you would describe yourself.  
                                                     There are no right or wrong answers. Please describe yourself as honestly as possible, which may require you to admit to some aspect of 
-                                                    yourself that you don't like ver much. Take your time and read each statement carefully, selecting the response that best describes you. 
+                                                    yourself that you don't like very much. Take your time and read each statement carefully, selecting the response that best describes you. 
                                                     1=Very False or Often False | 2=Sometimes or Somewhat False | 3=Sometimes or Somewhat True | 4=Very True or Often True"),
                                         ),
                                         
@@ -270,51 +270,51 @@ ui <- dashboardPage(skin = "black",
                                                 column(width = 6,
                                                        box(
                                                          width = NULL, title = "",
-                                                         sliderInput("HH_SINC_1", "1. I sometimes pretend to be more than I am.", width = '425px', 1, 4,  1),
-                                                         sliderInput("HH_FAIR_1", "2. I would never take things that aren't mine.  ", width = '425px', 1, 4,  1),
-                                                         sliderInput("HH_GREED_1", "3. I would enjoy being a famous celebrity.  ", width = '425px', 1, 4,  1),
-                                                         sliderInput("HH_MOD_1", "4. I think that I'm better than most other people.   ", width = '425px', 1, 4,  1),
-                                                         sliderInput("HH_SINC_2", "5. I use of flattery to get ahead. ", width = '425px', 1, 4,  1),
-                                                         sliderInput("HH_FAIR_2", "6. I would cheat on my taxes.  ", width = '425px', 1, 4,  1),
-                                                         sliderInput("HH_GREED_2", "7. I don't strive for elegance in my appearance.  ", width = '425px', 1, 4,  1),
-                                                         sliderInput("HH_MOD_2", "8. I see myself as an average person.   ", width = '425px', 1, 4,  1),
-                                                         sliderInput("HH_SINC_3", "9. I tell other people what they want to hear so that they will do what I want them to do.", width = '425px', 1, 4,  1),
-                                                         sliderInput("HH_FAIR_3", "10. I alwys return extra change when a cashier makes a mistake. ", width = '425px', 1, 4,  1),
-                                                         sliderInput("HH_GREED_3", "11. I love luxury.  ", width = '425px', 1, 4,  1),
-                                                         sliderInput("HH_MOD_3", "12. I'm just an ordinary person.", width = '425px', 1, 4,  1),
-                                                         sliderInput("HH_SINC_4", "13. I sometimes put on a 'show' to impress people.", width = '425px', 1, 4,  1),
-                                                         sliderInput("HH_FAIR_4", "14. I think I would feel very badly if I were to steal anything from someone else.", width = '425px', 1, 4,  1),
-                                                         sliderInput("HH_GREED_4", "15. I have a strong need for power. ", width = '425px', 1, 4,  1),
-                                                         sliderInput("HH_MOD_4", "16. I consider myself just an average person.", width = '425px', 1, 4,  1),
-                                                         sliderInput("HH_SINC_5", "17. I would switch my loyalties should I need to.", width = '425px', 1, 4,  1),
-                                                         sliderInput("HH_FAIR_5", "18. I try to follow the rules.", width = '425px', 1, 4,  1),
-                                                         sliderInput("HH_GREED_5", "19. I strive to be a high status person.", width = '425px', 1, 4,  1),
-                                                         sliderInput("HH_MOD_5", "20. I would like to have more power than other people.", width = '425px', 1, 4,  1),
+                                                         sliderInput("HH_SINC_1", "1. I sometimes pretend to be more than I am.", width = '425px', 1, 5,  1),
+                                                         sliderInput("HH_FAIR_1", "2. I would never take things that aren't mine.  ", width = '425px', 1, 5,  1),
+                                                         sliderInput("HH_GREED_1", "3. I would enjoy being a famous celebrity.  ", width = '425px', 1, 5,  1),
+                                                         sliderInput("HH_MOD_1", "4. I think that I'm better than most other people.   ", width = '425px', 1, 5,  1),
+                                                         sliderInput("HH_SINC_2", "5. I use of flattery to get ahead. ", width = '425px', 1, 5,  1),
+                                                         sliderInput("HH_FAIR_2", "6. I would cheat on my taxes.  ", width = '425px', 1, 5,  1),
+                                                         sliderInput("HH_GREED_2", "7. I don't strive for elegance in my appearance.  ", width = '425px', 1, 5,  1),
+                                                         sliderInput("HH_MOD_2", "8. I see myself as an average person.   ", width = '425px', 1, 5,  1),
+                                                         sliderInput("HH_SINC_3", "9. I tell other people what they want to hear so that they will do what I want them to do.", width = '425px', 1, 5,  1),
+                                                         sliderInput("HH_FAIR_3", "10. I alwys return extra change when a cashier makes a mistake. ", width = '425px', 1, 5,  1),
+                                                         sliderInput("HH_GREED_3", "11. I love luxury.  ", width = '425px', 1, 5,  1),
+                                                         sliderInput("HH_MOD_3", "12. I'm just an ordinary person.", width = '425px', 1, 5,  1),
+                                                         sliderInput("HH_SINC_4", "13. I sometimes put on a 'show' to impress people.", width = '425px', 1, 5,  1),
+                                                         sliderInput("HH_FAIR_4", "14. I think I would feel very badly if I were to steal anything from someone else.", width = '425px', 1, 5,  1),
+                                                         sliderInput("HH_GREED_4", "15. I have a strong need for power. ", width = '425px', 1, 5,  1),
+                                                         sliderInput("HH_MOD_4", "16. I consider myself just an average person.", width = '425px', 1, 5,  1),
+                                                         sliderInput("HH_SINC_5", "17. I would switch my loyalties should I need to.", width = '425px', 1, 5,  1),
+                                                         sliderInput("HH_FAIR_5", "18. I try to follow the rules.", width = '425px', 1, 5,  1),
+                                                         sliderInput("HH_GREED_5", "19. I strive to be a high status person.", width = '425px', 1, 5,  1),
+                                                         sliderInput("HH_MOD_5", "20. I would like to have more power than other people.", width = '425px', 1, 5,  1),
                                                        )
                                                 ), 
                                                 column(width = 6,
                                                        box(style = "padding-bottom:50px",
                                                            width = NULL, title = "",
-                                                           sliderInput("HH_SINC_6", "21. I often act like someone I'm not to impress people.  ", width = '425px', 1, 4,  1),
-                                                           sliderInput("HH_FAIR_6", "22. I admire a really clever scam. ", width = '425px', 1, 4,  1),
-                                                           sliderInput("HH_GREED_6", "23. I am mainly interested in money. ", width = '425px', 1, 4,  1),
-                                                           sliderInput("HH_MOD_6", "24. I believe that I'm better than others.  ", width = '425px', 1, 4,  1),
-                                                           sliderInput("HH_SINC_7", "25. I often pretend to be concerned for others. ", width = '425px', 1, 4,  1),
-                                                           sliderInput("HH_FAIR_7", "26. It's okay to cheat if it helps me to get ahead. ", width = '425px', 1, 4,  1),
-                                                           sliderInput("HH_GREED_7", "27. I wish to stay young forever.  ", width = '425px', 1, 4,  1),
-                                                           sliderInput("HH_MOD_7", "28. I like it when I attract attention.  ", width = '425px', 1, 4,  1),
-                                                           sliderInput("HH_SINC_8", "29. I act like different people in different situations.  ", width = '425px', 1, 4,  1),
-                                                           sliderInput("HH_FAIR_8", "30. I tend to steal things.  ", width = '425px', 1, 4,  1),
-                                                           sliderInput("HH_GREED_8", "31. I try to impress other people. ", width = '425px', 1, 4,  1),
-                                                           sliderInput("HH_MOD_8", "32. I think I'm more capable than most others. ", width = '425px', 1, 4,  1),
-                                                           sliderInput("HH_SINC_9", "33. I find it is necessary to please people who have power. ", width = '425px', 1, 4,  1),
-                                                           sliderInput("HH_FAIR_9", "34. I have cheated on, or lied, to people who have trusted me. ", width = '425px', 1, 4,  1),
-                                                           sliderInput("HH_GREED_9", "35. I prefer to eat at expensive restaurants. ", width = '425px', 1, 4,  1),
-                                                           sliderInput("HH_MOD_9", "36. I am likely to show off if I get the chance. ", width = '425px', 1, 4,  1),
-                                                           sliderInput("HH_SINC_10", "37. I let people push me around to help them feel important.  ", width = '425px', 1, 4,  1),
-                                                           sliderInput("HH_FAIR_10", "38. I don't think I'll regret taking advantage of someone. ", width = '425px', 1, 4,  1),
-                                                           sliderInput("HH_GREED_10", "39. I live life for my own personal gain. ", width = '425px', 1, 4,  1),
-                                                           sliderInput("HH_MOD_10", "40. I tend to boast about my virtues (goodness).  ", width = '425px', 1, 4,  1)
+                                                           sliderInput("HH_SINC_6", "21. I often act like someone I'm not to impress people.  ", width = '425px', 1, 5,  1),
+                                                           sliderInput("HH_FAIR_6", "22. I admire a really clever scam. ", width = '425px', 1, 5,  1),
+                                                           sliderInput("HH_GREED_6", "23. I am mainly interested in money. ", width = '425px', 1, 5,  1),
+                                                           sliderInput("HH_MOD_6", "24. I believe that I'm better than others.  ", width = '425px', 1, 5,  1),
+                                                           sliderInput("HH_SINC_7", "25. I often pretend to be concerned for others. ", width = '425px', 1, 5,  1),
+                                                           sliderInput("HH_FAIR_7", "26. It's okay to cheat if it helps me to get ahead. ", width = '425px', 1, 5,  1),
+                                                           sliderInput("HH_GREED_7", "27. I wish to stay young forever.  ", width = '425px', 1, 5,  1),
+                                                           sliderInput("HH_MOD_7", "28. I like it when I attract attention.  ", width = '425px', 1, 5,  1),
+                                                           sliderInput("HH_SINC_8", "29. I act like different people in different situations.  ", width = '425px', 1, 5,  1),
+                                                           sliderInput("HH_FAIR_8", "30. I tend to steal things.  ", width = '425px', 1, 5,  1),
+                                                           sliderInput("HH_GREED_8", "31. I try to impress other people. ", width = '425px', 1, 5,  1),
+                                                           sliderInput("HH_MOD_8", "32. I think I'm more capable than most others. ", width = '425px', 1, 5,  1),
+                                                           sliderInput("HH_SINC_9", "33. I find it is necessary to please people who have power. ", width = '425px', 1, 5,  1),
+                                                           sliderInput("HH_FAIR_9", "34. I have cheated on, or lied, to people who have trusted me. ", width = '425px', 1, 5,  1),
+                                                           sliderInput("HH_GREED_9", "35. I prefer to eat at expensive restaurants. ", width = '425px', 1, 5,  1),
+                                                           sliderInput("HH_MOD_9", "36. I am likely to show off if I get the chance. ", width = '425px', 1, 5,  1),
+                                                           sliderInput("HH_SINC_10", "37. I let people push me around to help them feel important.  ", width = '425px', 1, 5,  1),
+                                                           sliderInput("HH_FAIR_10", "38. I don't think I'll regret taking advantage of someone. ", width = '425px', 1, 5,  1),
+                                                           sliderInput("HH_GREED_10", "39. I live life for my own personal gain. ", width = '425px', 1, 5,  1),
+                                                           sliderInput("HH_MOD_10", "40. I tend to boast about my virtues (goodness).  ", width = '425px', 1, 5,  1)
                                                        ) 
                                                 )   
                                             )          
